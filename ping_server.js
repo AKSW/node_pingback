@@ -1,4 +1,4 @@
-var Pingback = require('./lib/nodemantic')
+var Pingback = require('./lib/pingback')
   , express = require('express');
 
 var target = express();
