@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ping="http://purl.org/net/pingback/" xmlns:ref="http://purl.org/vocab/relationship/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:cert="http://www.w3.org/ns/auth/cert#" xmlns:foaf="http://xmlns.com/foaf/0.1/">  
+  <rdf:Description rdf:about="http://fb.comiles.eu/?c=person&amp;id=natanael"> 
+    <activityFeed xmlns="http://purl.org/net/dssn/" rdf:resource="http://fb.comiles.eu/?c=feed&amp;a=getFeed&amp;uri=http%3A%2F%2Ffb.comiles.eu%2F%3Fc%3Dperson%26id%3Dnatanael"></activityFeed>  
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>  
+    <ping:to rdf:resource="http://fb.comiles.eu/?c=pingback&amp;a=ping"/>
+    <ref:worksWith rdf:resource="http://comiles.eu/splatte.rdf#me"/>
+    <ref:worksWith rdf:resource="http://id.feedface.de/me"/>
+    <ref:worksWith rdf:resource="http://people.comiles.eu/clemens"/>
+    <ref:worksWith rdf:resource="http://philipp.frischmuth24.de/id/me"/>
+    <ref:worksWith rdf:resource="http://sebastian.tramp.name"/>
+    <rdfs:seeAlso rdf:resource="http://aksw.org/NatanaelArndt"/>
+    <rdfs:seeAlso rdf:resource="http://comiles.eu/natanael.rdf#me"/>
+    <rdfs:seeAlso rdf:resource="http://natanael.comiles.eu/blog/feed/rdf"/>
+    <rdfs:seeAlso rdf:resource="http://twitter.com/statuses/user_timeline/14636263.rss"/>
+    <skos:altLabel>Natanel</skos:altLabel>
+    <skos:altLabel>Nataniel</skos:altLabel>
+    <skos:altLabel>Nate</skos:altLabel>
+    <skos:altLabel>Nathanael</skos:altLabel>
+    <cert:key rdf:resource="http://comiles.eu/natanael.rdf#key2012"/>
+    <foaf:account rdf:resource="http://fb.comiles.eu/?c=user&amp;id=natanael"/>
+    <foaf:based_near rdf:resource="http://linkedgeodata.org/triplify/node/250535863#id"/>
+    <foaf:depiction rdf:resource="http://gravatar.com/avatar/9bd2fa005d80986390510518f00476e8.png?s=128"/>
+    <foaf:family_name>Arndt</foaf:family_name>
+    <foaf:gender>male</foaf:gender>
+    <foaf:givenname>Peter Otto Natanael</foaf:givenname>
+    <foaf:jabberID>white_gecko@jabber.ccc.de</foaf:jabberID>
+    <foaf:knows rdf:resource="http://comiles.eu/splatte.rdf#me"/>
+    <foaf:knows rdf:resource="http://foaf.rollxx.com/people/card#me"/>
+    <foaf:knows rdf:resource="http://id.feedface.de/me"/>
+    <foaf:knows rdf:resource="http://people.comiles.eu/clemens"/>
+    <foaf:knows rdf:resource="http://philipp.frischmuth24.de/id/me"/>
+    <foaf:knows rdf:resource="http://sebastian.tramp.name"/>
+    <foaf:mbox_sha1sum>77178c1f222b7db93435eb695be07a607bf38aef</foaf:mbox_sha1sum>
+    <foaf:name>Natanael Arndt</foaf:name>
+    <foaf:name xml:lang="he">נתנאל ארנדט</foaf:name>
+    <foaf:nick>natanael</foaf:nick>
+    <foaf:nick>white_gecko</foaf:nick>
+    <foaf:schoolHomepage rdf:resource="http://schulzentrum.de/"/>
+    <foaf:schoolHomepage rdf:resource="http://www.uni-leipzig.de/"/>
+    <foaf:weblog rdf:resource="http://natanael.comiles.eu/blog/"/>
+    <foaf:workplaceHomepage rdf:resource="http://aksw.org/"/>
+  </rdf:Description>  
+</rdf:RDF>
