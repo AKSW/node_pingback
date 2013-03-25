@@ -1,24 +1,44 @@
-/*global require, module, console */
+var Pingback = require('./lib/pingback')
+  , express = require('express')
+  , EventEmitter = require('events').EventEmitter;
 
-var Pingback = require('./lib/pingback'),
-    express = require('express');
 
-var target = express();
+target = express();
 
-target.use(target.router);
 
-var ping = Pingback.middleware(function (source, target) {
-    'use strict';
-    console.log('Successful pingback from: ' + source.href);
-    //console.log('Page title:', this.title);
-    //console.log('Excerpt: ' + this.excerpt);
+target.use('/ping', function(req, res, next) {
+    var ping = new Pingback(req, res);
+    ping.on('fault', function(code, msg) {
+      console.error(
+        'Received bad pingback from '
+        + this.source.href + '.'
+        + ' Fault Code: ' + code
+        + ' - Message: ' + msg
+      );
+    });
+    ping.on('semantic_ping', function() {
+      console.log('semantic_ping: Successful pingback :');
+      console.log(this.excerpt);
+    });
+
+    ping.on('nonsemantic_ping', function() {
+      console.log('nonsemantic_ping: Successful pingback :');
+      console.log(this.excerpt);
+
+    });
+
+    ping.on('error', next);
+    ping.on('end', function(source, target, next) {
+      next();
+    });
+    req.pipe(ping);
 });
 
-target.use('/ping', ping);
 target.use(function (err, req, res, next) {
     'use strict';
     console.log(err.stack || err);
 });
+
 
 target.listen(5000);
 
